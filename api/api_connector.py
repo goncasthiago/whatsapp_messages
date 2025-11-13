@@ -13,11 +13,7 @@ class DatabaseConnector:
         self.supabase: Client = create_client(
             url,
             key,
-            options=ClientOptions(
-                postgrest_client_timeout=10,
-                storage_client_timeout=10,
-                schema="public",
-            )
+            
         )
 
     def get_contacts(self):
